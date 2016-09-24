@@ -145,11 +145,21 @@ li.tag-img {
     text-align: center;
 }
 
+.course-title {
+	background-color: #d1e0e4;
+}
+
+
 .view-curri {
 	color: red;
 	text-decoration: none;
 	display: inline-block;
 	margin-bottom: 30px;
+	background-color: lightgreen;
+}
+
+.view-curri:hover {
+	background-color: #76c576;
 }
 
 .course-popularity > div {
@@ -177,6 +187,10 @@ li.tag-img {
 	display: inline-block;
     vertical-align: top;
     margin-top: 7px;
+}
+
+.tag {
+	background-color: #c4efe3
 }
 
 
