@@ -1,0 +1,73 @@
+
+<div class="search-course-cnt">
+	<input placeholder="Search (by tag)" ng-model="searchTagInput">
+	<!--<button id="btn-search-course">Search</button>-->
+</div>
+<div class="search-mgs-cnt">
+	<span ng-if="allCourses.length">Result: {{ allCourses.length }} courses found</span>
+	<span ng-if="!(allCourses.length)">No courses found</span>
+	<!-- <button class="btn-filter-course">Filter</button> -->
+</div>
+
+<div class="filter-course-cnt">
+	<ul class="sort-list">
+		<label>Sort: </label>
+		<label>
+		    <input type="radio" ng-model="filterValue" value="up">
+		    Vote (Up)
+		</label>
+		<label>
+			<input type="radio" ng-model="filterValue" value="down">
+			Vote (Down)
+		</label>
+		<label>
+			<input type="radio" ng-model="filterValue" value="learn">
+			Learners
+		</label>
+		<label>
+			<input type="radio" ng-model="filterValue" value="Duration">
+			Duration
+		</label>
+	</ul>
+</div>
+
+<div class="course-list-detail-cnt">
+	<div class="course-list-cnt">
+		<ul class="course-list">
+			<li class="cursor-hover course-indiv" ng-repeat="currentCourse in allCourses" ng-click="displayCourse($index)"><span ng-bind="currentCourse.name"></span></li>
+		</ul>
+	</div><!--
+	--><section class="course-info-cnt">
+		<div class="back"><button>&#60; Back</button></div>
+		<img class="img-course" ng-src="{{course.image}}" /><!--
+		--><div class="course-details-cnt">
+			<span class="course-title" ng-bind="course.name"></span>
+			<p class="tags-cnt">
+				<ul class="tag-list">
+					<li class="tag-img"></li>
+					<li ng-repeat="tag in course.tags"><span ng-bind="tag"></span></li>
+				</ul>
+			</p>
+			<div class="course-popularity">
+				<div class="votes">
+					<div class="upvotes cursor-hover"><div class="upvote-img" ng-click="upvote(course.id)"></div><span class="text-align">{{ course.upvotes }}</span>
+					</div>
+					<div class="downvotes cursor-hover"><div class="downvote-img" ng-click="downvote(course.id)"></div><span class="text-align">{{ course.downvotes }}</span>
+					</div>
+				</div>
+				<div class="enroll-details">
+					<div class="learners"><div class="learner-img" ng-click="upvote(course.id)"></div><span class="text-align">{{ course.learner }} learners</span>
+					</div>
+					<div class="hours"><div class="hours-img" ng-click="upvote(course.id)"></div><span class="text-align">{{ course.hours }} hours</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="course-desc-cnt">
+			<h3>Description</h3>
+			<p class="course-desc" ng-bind="course.description">
+			</p>
+		</div>
+		<a class="view-curri" ng-href="{{course.sign_up}}" target="_blank">View Curriculum</a>
+	</section>
+</div>

@@ -1,0 +1,256 @@
+* {
+	box-sizing: border-box;
+}
+
+.cursor-hover {
+	cursor:pointer;
+}
+
+.header {
+	text-align: center;
+	border-bottom: 1px solid #D3D3D3;
+	background-color: #7dfdbc;
+}
+
+.logo img {
+	width: 50px;
+	height: 40px;
+}
+
+.site-name, .site-tag {
+	display: inline-block;
+}
+
+.site-name {
+	margin-top: 5px;
+    margin-left: 5px;
+    vertical-align: top;
+    font-size: 30px;
+    font-family: "Comic Sans MS", cursive, sans-serif
+}
+
+.site-tag {
+	margin-top: 30px;
+    margin-left: 5px;
+    vertical-align: top;
+}
+
+.course-info-cnt .img-course {
+	width: 100%;
+	height: auto;
+	background-size: cover;
+}
+
+.course-info-cnt, .tags-cnt, .course-list-cnt, .course-desc-cnt, .course-desc, .view-curri, .course-popularity {
+	margin-top: 25px;
+}
+
+.back {
+	margin-bottom: 25px;
+}
+
+.tag-list li {
+	display: inline;
+}
+
+.upvote-img, .downvote-img, .learner-img, .hours-img, .tag-img {
+	display: inline-block;
+	margin-right: 5px;
+	width: 25px;
+    height: 25px;
+    background-size: cover;
+	
+}
+
+.upvote-img, .downvote-img, .learner-img, .hours-img {
+	margin-bottom: 10px;
+}
+
+.upvote-img {
+	background-image: url("../images/like.png");   
+}
+
+.downvote-img {
+	background-image: url("../images/hands.png"); 
+}
+
+.learner-img {
+	background-image: url("../images/users.png");   
+}
+
+.hours-img {
+	background-image: url("../images/alarm-clock.png"); 
+}
+
+.tag-list li {
+	border: 1px solid #000;
+	display: inline-block;
+	padding: 5px;
+	margin-right: 5px;
+	border-radius: 25px;
+	margin-top: 5px;
+}
+
+li.tag-img {
+	border: none;
+    border-radius: 0;
+    height: 32px;
+    width: 35px;
+    background-size: inherit;
+    background-repeat: no-repeat;
+	background-image: url("../images/tag.png");
+}
+
+.course-info-cnt {
+	display: none;
+}
+
+
+.course-desc {
+	border: 1px solid #000;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.course-list-cnt li{
+	border: 1px solid #000;
+	height:30px;
+	padding-top: 7px;
+	background-color: #D3D3D3;
+	margin-bottom: 6px;
+}
+    
+.search-course-cnt input {
+	width: 80%;
+	margin-top:25px;
+	margin-bottom: 10px;
+	height: 35px;
+	font-size: 18px;
+}
+
+.btn-filter-course {
+	float: right;
+}
+
+.container {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.course-title, .view-curri {
+    padding: 8px;
+    border: 1px solid #000;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.view-curri {
+	color: red;
+	text-decoration: none;
+	display: inline-block;
+	margin-bottom: 30px;
+}
+
+.course-popularity > div {
+	display: inline-block;
+}
+
+.votes {
+	float: left;
+}
+
+.enroll-details {
+	margin-left: 100px;
+}
+
+.course-details-cnt {
+	padding-left: 10px;
+}
+
+.course-list li span {
+	display: inline-block;
+	padding-left: 10px;
+}
+
+.text-align {
+	display: inline-block;
+    vertical-align: top;
+    margin-top: 7px;
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	.filter-course-cnt, .course-info-cnt, .course-list-cnt {
+		display: inline-block;
+	}
+
+	.course-list-cnt {
+		width: 25%;
+		vertical-align: top;
+		margin-top: 25px;
+	}
+
+	.course-info-cnt {
+		width: 75%;
+		border-left: 1px solid #000;
+		margin-top: 0;
+		padding: 25px;
+	}
+
+	.btn-filter-course {
+		display: none;
+	}
+
+	.course-list-cnt {
+		position: static;
+		background:none;
+		margin-top: 0;
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 25px;
+	}
+
+	.course-info-cnt .img-course {
+		width: 25%;
+		height: auto;
+	}
+
+	.course-details-cnt {
+		width: 75%;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.course-title, .view-curri {
+		width: 300px;
+	}
+
+	.view-curri {
+		float: right;
+		margin-bottom: 0;
+	}
+
+	.course-list-detail-cnt {
+		border: 1px solid #000;
+		margin-top: 25px;
+	}
+
+	.course-list-cnt li {
+    	border-radius: 20px;
+	}
+
+	.enroll-details {
+		float:right;
+	}
+
+	.back {
+		display: none;
+	}
+
+	.sort-list li, .sort-heading {
+		display: inline-block;
+	}
+
+}
