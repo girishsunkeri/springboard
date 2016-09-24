@@ -110,6 +110,7 @@ li.tag-img {
 	border: 1px solid #000;
 	padding: 10px;
 	border-radius: 10px;
+	background-color: #ece9e9;
 }
 
 .course-list-cnt li{
@@ -190,7 +191,7 @@ li.tag-img {
 }
 
 .tag {
-	background-color: #c4efe3
+	background-color: #c4efe3;
 }
 
 
