@@ -28,15 +28,6 @@
 
         getAllCourses();
 
-        function initCurrentCourse(){
-            if($scope.currentCourseIndex < $scope.allCourses.length){
-                $scope.course = angular.copy($scope.allCourses[$scope.currentCourseIndex]);
-                $scope.course.tags = $scope.course.tags.split(',');
-                $scope.course.upvotes = courseService.getUpvotes($scope.course.id);
-                $scope.course.downvotes = courseService.getDownvotes($scope.course.id);
-            }
-        }
-
         function getAllCourses(){
             courseService.getAllCoursesData()
             .then(function(allCourses){
@@ -59,6 +50,17 @@
 
             });
         }
+        
+        function initCurrentCourse(){
+            if($scope.currentCourseIndex < $scope.allCourses.length){
+                $scope.course = angular.copy($scope.allCourses[$scope.currentCourseIndex]);
+                $scope.course.tags = $scope.course.tags.split(',');
+                $scope.course.upvotes = courseService.getUpvotes($scope.course.id);
+                $scope.course.downvotes = courseService.getDownvotes($scope.course.id);
+            }
+        }
+
+        
 
         $scope.$watch('searchTagInput', function(newValue, oldValue) {
 
